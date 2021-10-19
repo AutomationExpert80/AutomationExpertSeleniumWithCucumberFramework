@@ -249,26 +249,26 @@ agent any
                     }
                 }
             }
-         stage("Load Properties in to configuration file"){
-                 steps{
-            script {
-                def props = """
-TestingEnvironment =${params.TestingEnvironment}
-UseCloudEnv =${params.UseCloudEnv}
-CloudEnvName =${params.CloudEnvName}
-Os =${Os}
-Os_version =${params.Os_Version}
-BrowserName =${params.Browser_Name}
-BrowserVersion =${params.Browser_Version}
-ImplicitlyWaitTime =${params.ImplicitlyWaitTime}
-SecretFilePath =${params.SecretFilePath}
-                """
-                writeFile file: "config.properties", text: props
-                def str =  readFile file: "config.properties"
-                echo str
-            }
-         }
-      }
+//          stage("Load Properties in to configuration file"){
+//                  steps{
+//             script {
+//                 def props = """
+// TestingEnvironment =${params.TestingEnvironment}
+// UseCloudEnv =${params.UseCloudEnv}
+// CloudEnvName =${params.CloudEnvName}
+// Os =${Os}
+// Os_version =${params.Os_Version}
+// BrowserName =${params.Browser_Name}
+// BrowserVersion =${params.Browser_Version}
+// ImplicitlyWaitTime =${params.ImplicitlyWaitTime}
+// SecretFilePath =${params.SecretFilePath}
+//                 """
+//                 writeFile file: "config.properties", text: props
+//                 def str =  readFile file: "config.properties"
+//                 echo str
+//             }
+//          }
+//       }
 stage('Running the test suit'){
 
 steps{
