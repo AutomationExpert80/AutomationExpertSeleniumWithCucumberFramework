@@ -136,7 +136,7 @@ agent any
                                                 sandbox: false,
                                                 script: '''
                                                 if (Os.equals("Mac")){
-                                                    return["macOS 12(Monterey)", "macOS 11(Big Sur)", "macOS 10.15(Catalina)","macOS 10.14(Mojave)","macOS 10.13(High Sierra)","macOS 10.12(Sierra)","OS X 10.11(El Capitan)"]
+                                                    return[  "macOS 11 Big Sur","macOS 12 Monterey", "macOS 10.15 Catalina","macOS 10.14 Mojave","macOS 10.13 High Sierra","macOS 10.12 Sierra","OS X 10.11 El Capitan"]
                                                 }
                                                 else if(Os.equals("Windows")){
                                                     return["Windows 11", "Windows 10", "Windows 7","Windows 8","Windows XP","Windows Vista","Windows 2000","Windows ME","Windows 98"]
@@ -197,11 +197,11 @@ agent any
                                                 script: '''
                                                 if (Os.equals("Mac")){
                                                     if(Browser_Name.equals("Chrome")){
-                                                    return["97","96","95","94","93","92","91","90","89","88","87"]
+                                                    return["94","93","92","91","90","89","88","87"]
                                                     }else if(Browser_Name.equals("Edge")){
-                                                    return["97","96","95","94","93","92","91","90","89","88","87"]
+                                                    return["94","93","92","91","90","89","88","87"]
                                                     }else if(Browser_Name.equals("Firefox")){
-                                                    return["97","96","95","94","93","92","91","90","89","88","87"]
+                                                    return["94","93","92","91","90","89","88","87"]
                                                     }else if(Browser_Name.equals("Safari")){
                                                     return["15","14","13","12","11","10","9"]
                                                     }else if(Browser_Name.equals("Opera")){
@@ -210,11 +210,11 @@ agent any
                                                 }
                                                 else if(Os.equals("Windows")){
                                                     if(Browser_Name.equals("Chrome")){
-                                                    return["97","96","95","94","93","92","91","90","89","88","87"]
+                                                    return["94","93","92","91","90","89","88","87"]
                                                     }else if(Browser_Name.equals("Edge")){
-                                                    return["97","96","95","94","93","92","91","90","89","88","87"]
+                                                    return["94","93","92","91","90","89","88","87"]
                                                     }else if(Browser_Name.equals("Firefox")){
-                                                    return["97","96","95","94","93","92","91","90","89","88","87"]
+                                                    return["94","93","92","91","90","89","88","87"]
                                                     }else if(Browser_Name.equals("Internet Explorer")){
                                                     return["11","10","9","8","7"]
                                                     }else if(Browser_Name.equals("Opera")){
@@ -222,11 +222,11 @@ agent any
                                                 }
                                                 else if(Os.equals("Linux")){
                                                     if(Browser_Name.equals("Chrome")){
-                                                    return["97","96","95","94","93","92","91","90","89","88","87"]
+                                                    return["94","93","92","91","90","89","88","87"]
                                                     }else if(Browser_Name.equals("Edge")){
-                                                    return["97","96","95","94","93","92","91","90","89","88","87"]
+                                                    return["94","93","92","91","90","89","88","87"]
                                                     }else if(Browser_Name.equals("Firefox")){
-                                                    return["97","96","95","94","93","92","91","90","89","88","87"]
+                                                    return["94","93","92","91","90","89","88","87"]
                                                     }else if(Browser_Name.equals("Safari")){
                                                     return["15","14","13","12","11","10","9"]
                                                     }else if(Browser_Name.equals("Opera")){
