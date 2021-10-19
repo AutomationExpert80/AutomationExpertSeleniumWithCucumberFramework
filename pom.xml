@@ -11,6 +11,20 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+
+                                <TestingEnvironment>${TestingEnvironment}</TestingEnvironment>
+                                <UseCloudEnv>${UseCloudEnv}</UseCloudEnv>
+                                <CloudEnvName>${CloudEnvName}</CloudEnvName>
+                                <Os>${Os}</Os>
+                                <Os_version>${Os_version}</Os_version>
+                                <BrowserName>${BrowserName}</BrowserName>
+                                <BrowserVersion>${BrowserVersion}</BrowserVersion>
+                                <ImplicitlyWaitTime>${ImplicitlyWaitTime}</ImplicitlyWaitTime>
+                                <SecretFilePath>${SecretFilePath}</SecretFilePath>
+
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-html -->
@@ -108,7 +122,15 @@
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <systemPropertyVariables>
-                        <propertyName>propertyValue</propertyName>
+<!--                        <TestingEnvironment>${-DTestingEnvironment}</TestingEnvironment>-->
+<!--                        <UseCloudEnv>propertyValue</UseCloudEnv>-->
+<!--                        <CloudEnvName>propertyValue</CloudEnvName>-->
+<!--                        <Os>propertyValue</Os>-->
+<!--                        <Os_version>propertyValue</Os_version>-->
+<!--                        <BrowserName>propertyValue</BrowserName>-->
+<!--                        <BrowserVersion>propertyValue</BrowserVersion>-->
+<!--                        <ImplicitlyWaitTime>propertyValue</ImplicitlyWaitTime>-->
+<!--                        <SecretFilePath>propertyValue</SecretFilePath>-->
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
