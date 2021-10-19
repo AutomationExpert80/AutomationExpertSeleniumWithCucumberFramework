@@ -289,8 +289,7 @@ steps{
              //bat(/mvn install -Dcucumber.filter.tags=${params.CucumberTag}/)
              }else
               {
-              sh "mvn install -DTestingEnvironment =${params.TestingEnvironment} -DUseCloudEnv =${params.UseCloudEnv} -DOs =${Os} -DOs_version =${params.Os_Version}
--DBrowsername =${params.Browser_Name} -DBrowserVersion =${params.Browser_Version} -DImplicitlyWaitTime =${params.ImplicitlyWaitTime} -DSecretFilePath =${params.SecretFilePath} -Dcucumber.filter.tags=${params.CucumberTag}"
+              sh "mvn install -DTestingEnvironment=${params.TestingEnvironment} -DUseCloudEnv=${params.UseCloudEnv} -DOs=${Os} -DOs_version=${params.Os_Version}-DBrowsername=${params.Browser_Name} -DBrowserVersion=${params.Browser_Version} -DImplicitlyWaitTime=${params.ImplicitlyWaitTime} -DSecretFilePath=${params.SecretFilePath} -Dcucumber.filter.tags=${params.CucumberTag}"
 
               //sh "mvn install -Dcucumber.filter.tags=${params.CucumberTag}"
               }
