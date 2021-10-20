@@ -6,15 +6,10 @@
     <groupId>com.automationExpert</groupId>
     <artifactId>AutomationExpertSeleniumFramework</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-
-<!--        <activation>-->
-<!--            <activeByDefault>true</activeByDefault>-->
-<!--        </activation>-->
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-html -->
@@ -115,12 +110,12 @@
                         <Testing_Environment>Testing_Environment</Testing_Environment>
                         <Use_Cloud_Env>Use_Cloud_Env</Use_Cloud_Env>
                         <Cloud_Env_Name>Cloud_Env_Name</Cloud_Env_Name>
-                        <Os_Name>Os_Name</Os_Name>
+                        <Os>Os</Os>
                         <Os_Version>Os_Version</Os_Version>
                         <Browser_Name>Browser_Name</Browser_Name>
                         <Browser_Version>Browser_Version</Browser_Version>
                         <Implicitly_Wait_Time>Implicitly_Wait_Time</Implicitly_Wait_Time>
-                        <Secret_File_Path>Secret_File_Path</Secret_File_Path>
+<!--                        <Secret_File_Path>Secret_File_Path</Secret_File_Path>-->
                     </systemPropertyVariables>
                 </configuration>
             </plugin>

@@ -275,24 +275,11 @@ steps{
             script {
              def os = params.Os
              if(os=="Windows"){
-             bat(/mvn install
-                           -DTestingEnvironment =${params.TestingEnvironment}
-                           -DUseCloudEnv =${params.UseCloudEnv}
-                           -DOs =${Os}
-                           -DOs_version =${params.Os_Version}
-                           -DBrowserName =${params.Browser_Name}
-                           -DBrowserVersion =${params.Browser_Version}
-                           -DImplicitlyWaitTime =${params.ImplicitlyWaitTime}
-                           -DSecretFilePath =${params.SecretFilePath}
-                           -Dcucumber.filter.tags=${params.CucumberTag}
-             /)
+             bat(/mvn -DTesting_Environment=${params.Testing_Environment} -DUse_Cloud_Env=${params.Use_Cloud_Env} -DOs=${Os} -DOs_Version=${params.Os_Version} -DBrowser_Name=${params.Browser_Name} -DBrowser_Version=${params.Browser_Version} -DImplicitly_Wait_Time=${params.Implicitly_Wait_Time} -Dcucumber.filter.tags=${params.Cucumber_Tag} install/)
              //bat(/mvn install -Dcucumber.filter.tags=${params.CucumberTag}/)
              }else
               {
-            //  sh "mvn -DTestingEnvironment=${params.TestingEnvironment} -DUseCloudEnv=${params.UseCloudEnv} -DOs=${Os} -DOs_version=${params.Os_Version} -DBrowsername=${params.Browser_Name} -DBrowserVersion=${params.Browser_Version} -DImplicitlyWaitTime=${params.ImplicitlyWaitTime} -DSecretFilePath=${params.SecretFilePath} -Dcucumber.filter.tags=${params.CucumberTag} install"
-              sh "mvn -DTesting_Environment=${params.Testing_Environment} -DUse_Cloud_Env=${params.Use_Cloud_Env} -DOs=${Os} -DOs_Version=${params.Os_Version} -DBrowser_Name=${params.Browser_Name} -DBrowser_Version=${params.Browser_Version} -DImplicitly_Wait_Time=${params.Implicitly_Wait_Time} -Dcucumber.filter.tags=${params.Cucumber_Tag} install"
-//mvn -DTestingEnvironment=QA -DUseCloudEnv=False -DOs=Mac -DOs_version=${params.Os_Version} -DBrowsername=${params.Browser_Name} -DBrowserVersion=${params.Browser_Version} -DImplicitlyWaitTime=${params.ImplicitlyWaitTime} -DSecretFilePath=${params.SecretFilePath} -Dcucumber.filter.tags=${params.CucumberTag} install
-              //sh "mvn install -Dcucumber.filter.tags=${params.CucumberTag}"
+              sh "mvn \"-DTesting_Environment=${params.Testing_Environment}\" \"-DUse_Cloud_Env=${params.Use_Cloud_Env}\" \"-DOs=${Os}\" \"-DOs_Version=${params.Os_Version}\" \"-DBrowser_Name=${params.Browser_Name}\" \"-DBrowser_Version=${params.Browser_Version}\" -DImplicitly_Wait_Time=${params.Implicitly_Wait_Time} -Dcucumber.filter.tags=${params.Cucumber_Tag} install"
               }
 
               }
