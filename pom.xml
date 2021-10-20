@@ -112,15 +112,15 @@
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <systemPropertyVariables>
-                        <Testing_Environment>-DTesting_Environment</Testing_Environment>
-                        <Use_Cloud_Env>-DUse_Cloud_Env</Use_Cloud_Env>
-                        <Cloud_Env_Name>-DCloud_Env_Name</Cloud_Env_Name>
-                        <Os_Name>-DOs_Name</Os_Name>
-                        <Os_Version>-DOs_Version</Os_Version>
-                        <Browser_Name>-DBrowser_Name</Browser_Name>
-                        <Browser_Version>-DBrowser_Version</Browser_Version>
-                        <ImplicitlyWaitTime>-DImplicitlyWaitTime</ImplicitlyWaitTime>
-                        <Secret_File_Path>-DSecret_File_Path</Secret_File_Path>
+                        <Testing_Environment>-Testing_Environment</Testing_Environment>
+                        <Use_Cloud_Env>Use_Cloud_Env</Use_Cloud_Env>
+                        <Cloud_Env_Name>Cloud_Env_Name</Cloud_Env_Name>
+                        <Os_Name>Os_Name</Os_Name>
+                        <Os_Version>Os_Version</Os_Version>
+                        <Browser_Name>Browser_Name</Browser_Name>
+                        <Browser_Version>Browser_Version</Browser_Version>
+                        <ImplicitlyWaitTime>ImplicitlyWaitTime</ImplicitlyWaitTime>
+                        <Secret_File_Path>Secret_File_Path</Secret_File_Path>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
