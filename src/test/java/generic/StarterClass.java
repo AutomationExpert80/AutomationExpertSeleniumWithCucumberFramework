@@ -51,6 +51,14 @@ public  class StarterClass extends Common {
 
     @Before
     public void setUp_Init() throws IOException {
+        System.out.println(testingEnvironment);
+        System.out.println(useCloudEnv);
+        System.out.println(cloudEnvName);
+        System.out.println(os);
+        System.out.println(os_version);
+        System.out.println(browserName);
+        System.out.println(browserVersion);
+        System.out.println(implicitlyWaitTime);
 
         setUp( useCloudEnv,  cloudEnvName,
                 os,  os_version,  browserName,
