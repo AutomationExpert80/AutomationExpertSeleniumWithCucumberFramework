@@ -136,7 +136,7 @@ agent any
                                                 sandbox: false,
                                                 script: '''
                                                 if (Os.equals("Mac")){
-                                                    return[  "macOS 11 Big Sur","macOS 12 Monterey", "macOS 10.15 Catalina","macOS 10.14 Mojave","macOS 10.13 High Sierra","macOS 10.12 Sierra","OS X 10.11 El Capitan"]
+                                                    return[  "macOS_11_BigSur","macOS 12 Monterey", "macOS 10.15 Catalina","macOS 10.14 Mojave","macOS 10.13 High Sierra","macOS 10.12 Sierra","OS X 10.11 El Capitan"]
                                                 }
                                                 else if(Os.equals("Windows")){
                                                     return["Windows 11", "Windows 10", "Windows 7","Windows 8","Windows XP","Windows Vista","Windows 2000","Windows ME","Windows 98"]
