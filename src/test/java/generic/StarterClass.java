@@ -23,16 +23,16 @@ public  class StarterClass extends Common {
         }
     }
 
-    private String testingEnvironment= prop.getProperty("TestingEnvironment");
-    private Boolean useCloudEnv= Boolean.parseBoolean(prop.getProperty("UseCloudEnv")) ;
-    private String cloudEnvName= prop.getProperty("CloudEnvName");
-    private String os= prop.getProperty("Os");
-    private String os_version = prop.getProperty("Os_version");
-    private String browserName = prop.getProperty("BrowserName");
-    private String browserVersion = prop.getProperty("BrowserVersion");
-    private long implicitlyWaitTime=Long.parseLong(prop.getProperty("ImplicitlyWaitTime").trim());
+    private String testingEnvironment= System.getProperty("Testing_Environment");
+    private Boolean useCloudEnv= Boolean.parseBoolean(System.getProperty("Use_Cloud_Env")) ;
+    private String cloudEnvName= System.getProperty("Cloud_Env_Name");
+    private String os= System.getProperty("Os_Name");
+    private String os_version = System.getProperty("Os_Version");
+    private String browserName = System.getProperty("Browser_Name");
+    private String browserVersion = System.getProperty("Browser_Version");
+    private long implicitlyWaitTime=Long.parseLong(System.getProperty("ImplicitlyWaitTime").trim());
 
-    private final String secretFilePath =prop.getProperty("SecretFilePath");
+    private final String secretFilePath =System.getProperty("Secret_File_Path");
     private static Properties secretProp;
     {
         try {

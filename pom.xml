@@ -11,20 +11,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+                                <Testing_Environment>-DTesting_Environment</Testing_Environment>
+                                <Use_Cloud_Env>-DUse_Cloud_Env</Use_Cloud_Env>
+                                <Cloud_Env_Name>-DCloud_Env_Name</Cloud_Env_Name>
+                                <Os_Name>-DOs_Name</Os_Name>
+                                <Os_Version>-DOs_Version</Os_Version>
+                                <Browser_Name>-DBrowser_Name</Browser_Name>
+                                <Browser_Version>-DBrowser_Version</Browser_Version>
+                                <ImplicitlyWaitTime>-DImplicitlyWaitTime</ImplicitlyWaitTime>
+                                <Secret_File_Path>-DSecret_File_Path</Secret_File_Path>
 <!--        <activation>-->
 <!--            <activeByDefault>true</activeByDefault>-->
 <!--        </activation>-->
-
-                                <TestingEnvironment>${TestingEnvironment}</TestingEnvironment>
-                                <UseCloudEnv>${UseCloudEnv}</UseCloudEnv>
-                                <CloudEnvName>${CloudEnvName}</CloudEnvName>
-                                <Os>${Os}</Os>
-                                <Os_version>${Os_version}</Os_version>
-                                <BrowserName>${BrowserName}</BrowserName>
-                                <BrowserVersion>${BrowserVersion}</BrowserVersion>
-                                <ImplicitlyWaitTime>${ImplicitlyWaitTime}</ImplicitlyWaitTime>
-                                <SecretFilePath>${SecretFilePath}</SecretFilePath>
-
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-html -->
