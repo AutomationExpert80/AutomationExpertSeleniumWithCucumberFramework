@@ -239,7 +239,7 @@ agent any
                                  ],
 
 
-                            string(defaultValue: 'src/test/resources/secret.properties', description: 'Secret Properties Path', name: 'SecretFilePath',trim: true),
+                          //  string(defaultValue: 'src/test/resources/secret.properties', description: 'Secret Properties Path', name: 'SecretFilePath',trim: true),
 
                             string(defaultValue: '4', description: 'Implicitly wait time', name: 'ImplicitlyWaitTime',trim: true),
 
@@ -289,7 +289,8 @@ steps{
              //bat(/mvn install -Dcucumber.filter.tags=${params.CucumberTag}/)
              }else
               {
-              sh "mvn -DTestingEnvironment=${params.TestingEnvironment} -DUseCloudEnv=${params.UseCloudEnv} -DOs=${Os} -DOs_version=${params.Os_Version} -DBrowsername=${params.Browser_Name} -DBrowserVersion=${params.Browser_Version} -DImplicitlyWaitTime=${params.ImplicitlyWaitTime} -DSecretFilePath=${params.SecretFilePath} -Dcucumber.filter.tags=${params.CucumberTag} install"
+            //  sh "mvn -DTestingEnvironment=${params.TestingEnvironment} -DUseCloudEnv=${params.UseCloudEnv} -DOs=${Os} -DOs_version=${params.Os_Version} -DBrowsername=${params.Browser_Name} -DBrowserVersion=${params.Browser_Version} -DImplicitlyWaitTime=${params.ImplicitlyWaitTime} -DSecretFilePath=${params.SecretFilePath} -Dcucumber.filter.tags=${params.CucumberTag} install"
+              sh "mvn -DTestingEnvironment=${params.TestingEnvironment} -DUseCloudEnv=${params.UseCloudEnv} -DOs=${Os} -DOs_version=${params.Os_Version} -DBrowsername=${params.Browser_Name} -DBrowserVersion=${params.Browser_Version} -DImplicitlyWaitTime=${params.ImplicitlyWaitTime} -Dcucumber.filter.tags=${params.CucumberTag} install"
 //mvn -DTestingEnvironment=QA -DUseCloudEnv=False -DOs=Mac -DOs_version=${params.Os_Version} -DBrowsername=${params.Browser_Name} -DBrowserVersion=${params.Browser_Version} -DImplicitlyWaitTime=${params.ImplicitlyWaitTime} -DSecretFilePath=${params.SecretFilePath} -Dcucumber.filter.tags=${params.CucumberTag} install
               //sh "mvn install -Dcucumber.filter.tags=${params.CucumberTag}"
               }

@@ -32,14 +32,14 @@ public  class StarterClass extends Common {
     private String browserVersion = System.getProperty("Browser_Version");
     private long implicitlyWaitTime=Long.parseLong(System.getProperty("ImplicitlyWaitTime").trim());
 
-    private  String secretFilePath =System.getProperty("Secret_File_Path");
-//    private  String secretFilePath ="src/test/resources/secret.properties";
+    //private  String secretFilePath =System.getProperty("Secret_File_Path");
+    private  String secretFilePath ="src/test/resources/secret.properties";
     private final String secret_FilePath ="\""+secretFilePath+"\"";
     private static Properties secretProp;
     {
         try {
-            //secretProp = loadProperties(secretFilePath);
-            secretProp = loadProperties(secret_FilePath);
+            secretProp = loadProperties(secretFilePath);
+            //secretProp = loadProperties(secret_FilePath);
         } catch (IOException e) {
             e.printStackTrace();
         }
