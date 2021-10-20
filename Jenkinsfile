@@ -11,7 +11,7 @@ agent any
                                     description: 'Select the Testing Environment from the Dropdown List',
                                     filterLength: 1,
                                     filterable: false,
-                                    name: 'TestingEnvironment',
+                                    name: 'Testing_Environment',
                                     script: [
                                         $class: 'GroovyScript',
                                         fallbackScript: [
@@ -33,7 +33,7 @@ agent any
                                     description: 'Select the test suit using the corresponding Cucumber Tag from the Dropdown List',
                                     filterLength: 1,
                                     filterable: false,
-                                    name: 'CucumberTag',
+                                    name: 'Cucumber_Tag',
                                     script: [
                                         $class: 'GroovyScript',
                                         fallbackScript: [
@@ -55,7 +55,7 @@ agent any
                                     description: 'Select the if Use Cloud Environment from the Dropdown List',
                                     filterLength: 1,
                                     filterable: false,
-                                    name: 'UseCloudEnv',
+                                    name: 'Use_Cloud_Env',
                                     script: [
                                         $class: 'GroovyScript',
                                         fallbackScript: [
@@ -76,7 +76,7 @@ agent any
                                 [$class: 'CascadeChoiceParameter',
                                     choiceType: 'PT_SINGLE_SELECT',
                                     description: 'Select the Cloud Environment Name from the Dropdown List',
-                                    name: 'CloudEnvName',
+                                    name: 'Cloud_Env_Name',
                                     referencedParameters: 'UseCloudEnv',
                                     script:
                                         [$class: 'GroovyScript',
@@ -241,7 +241,7 @@ agent any
 
                           //  string(defaultValue: 'src/test/resources/secret.properties', description: 'Secret Properties Path', name: 'SecretFilePath',trim: true),
 
-                            string(defaultValue: '4', description: 'Implicitly wait time', name: 'ImplicitlyWaitTime',trim: true),
+                            string(defaultValue: '4', description: 'Implicitly wait time', name: 'Implicitly_Wait_Time',trim: true),
 
                             string(defaultValue: 'automationexpert80@gmail.com', description: 'email for notifications', name: 'notification_email',trim: true)
                             ])
@@ -290,7 +290,7 @@ steps{
              }else
               {
             //  sh "mvn -DTestingEnvironment=${params.TestingEnvironment} -DUseCloudEnv=${params.UseCloudEnv} -DOs=${Os} -DOs_version=${params.Os_Version} -DBrowsername=${params.Browser_Name} -DBrowserVersion=${params.Browser_Version} -DImplicitlyWaitTime=${params.ImplicitlyWaitTime} -DSecretFilePath=${params.SecretFilePath} -Dcucumber.filter.tags=${params.CucumberTag} install"
-              sh "mvn -DTestingEnvironment=${params.TestingEnvironment} -DUseCloudEnv=${params.UseCloudEnv} -DOs=${Os} -DOs_version=${params.Os_Version} -DBrowsername=${params.Browser_Name} -DBrowserVersion=${params.Browser_Version} -DImplicitlyWaitTime=${params.ImplicitlyWaitTime} -Dcucumber.filter.tags=${params.CucumberTag} install"
+              sh "mvn -DTesting_Environment=${params.Testing_Environment} -DUse_Cloud_Env=${params.Use_Cloud_Env} -DOs=${Os} -DOs_Version=${params.Os_Version} -DBrowser_Name=${params.Browser_Name} -DBrowser_Version=${params.Browser_Version} -DImplicitly_Wait_Time=${params.Implicitly_Wait_Time} -Dcucumber.filter.tags=${params.Cucumber_Tag} install"
 //mvn -DTestingEnvironment=QA -DUseCloudEnv=False -DOs=Mac -DOs_version=${params.Os_Version} -DBrowsername=${params.Browser_Name} -DBrowserVersion=${params.Browser_Version} -DImplicitlyWaitTime=${params.ImplicitlyWaitTime} -DSecretFilePath=${params.SecretFilePath} -Dcucumber.filter.tags=${params.CucumberTag} install
               //sh "mvn install -Dcucumber.filter.tags=${params.CucumberTag}"
               }

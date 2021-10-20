@@ -30,7 +30,7 @@ public  class StarterClass extends Common {
     private String os_version = System.getProperty("Os_Version");
     private String browserName = System.getProperty("Browser_Name");
     private String browserVersion = System.getProperty("Browser_Version");
-    private long implicitlyWaitTime=Long.parseLong(System.getProperty("ImplicitlyWaitTime").trim());
+    private long implicitlyWaitTime=Long.parseLong(System.getProperty("Implicitly_Wait_Time").trim());
 
     //private  String secretFilePath =System.getProperty("Secret_File_Path");
     private  String secretFilePath ="src/test/resources/secret.properties";

@@ -112,14 +112,14 @@
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <systemPropertyVariables>
-                        <Testing_Environment>-Testing_Environment</Testing_Environment>
+                        <Testing_Environment>Testing_Environment</Testing_Environment>
                         <Use_Cloud_Env>Use_Cloud_Env</Use_Cloud_Env>
                         <Cloud_Env_Name>Cloud_Env_Name</Cloud_Env_Name>
                         <Os_Name>Os_Name</Os_Name>
                         <Os_Version>Os_Version</Os_Version>
                         <Browser_Name>Browser_Name</Browser_Name>
                         <Browser_Version>Browser_Version</Browser_Version>
-                        <ImplicitlyWaitTime>ImplicitlyWaitTime</ImplicitlyWaitTime>
+                        <Implicitly_Wait_Time>Implicitly_Wait_Time</Implicitly_Wait_Time>
                         <Secret_File_Path>Secret_File_Path</Secret_File_Path>
                     </systemPropertyVariables>
                 </configuration>
